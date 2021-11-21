@@ -3,7 +3,39 @@
 
 <input name="MAIN_URL" value="{{url('/')}}">
 <div class="kt-content  kt-grid__item kt-grid__item--fluid" id="kt_content">
-
+	<form action="{{url('/')}}">
+	<div class="form-group row ">
+				<label class="col-xl-3 col-lg-3 col-form-label text-right start-end-date">Date Start-End</label>
+				<div class="col-lg-6 col-xl-6">
+					<input type='text' class="form-control dateTime" name="DateFrom"value="{{isset($_GET['DateFrom']) ? $_GET['DateFrom'] : ''}} " />
+				</div>
+			</div>
+			<div class="form-group row ">
+				<label class="col-xl-3 col-lg-3 col-form-label text-right start-end-date">Date Start-End</label>
+				<div class="col-lg-6 col-xl-6">
+					<input type='text' class="form-control dateTime" name="DateTo"value="{{isset($_GET['DateTo']) ? $_GET['DateTo'] : ''}}" />
+				</div>
+			</div>
+			<div class="form-group row ">
+				<label class="col-xl-3 col-lg-3 col-form-label text-right start-end-date">Price From</label>
+				<div class="col-lg-6 col-xl-6">
+					<input type='text' class="form-control" name="PriceFrom" id="PriceFrom" value="{{isset($_GET['PriceFrom']) ? $_GET['PriceFrom'] : ''}}" />
+				</div>
+			</div>
+			<div class="form-group row ">
+				<label class="col-xl-3 col-lg-3 col-form-label text-right start-end-date">Price To</label>
+				<div class="col-lg-6 col-xl-6">
+					<input type='text' class="form-control" name="PriceTo" id="PriceTo" value="{{isset($_GET['PriceTo']) ? $_GET['PriceTo'] : ''}}" />
+				</div>
+			</div>
+			<div class="form-group row">
+                    <label class="col-xl-3 col-lg-3 col-form-label text-right kt-hidden-mobile">&nbsp;</label>
+                    <div class="col-lg-6 col-xl-6 text-left">
+                        <button type="submit" class="btn btn-outline-brand Filter"> View</button>
+                    </div>
+                </div>
+	</form>
+			
 							<div class="kt-portlet kt-portlet--mobile">
 								<div class="kt-portlet__head kt-portlet__head--lg">
 									<div class="kt-portlet__head-label">
@@ -57,6 +89,7 @@
 
 									<!--begin: Datatable -->
 									<div class="kt-datatable" id="child_data_local"></div>
+									<div class="kt-datatable1" id="child_data_local"></div>
 
 									<!--end: Datatable -->
 								</div>
@@ -64,10 +97,8 @@
 						</div>
                         <!--begin::Page Scripts(used by this page) -->
                         <script src="./assets/vendors/general/jquery/dist/jquery.js" type="text/javascript"></script>
-		<script src="./assets/script/orders.js" type="text/javascript"></script>
-        <script>
-            $(document).ready(function(e){
-                iniFinction();
-            });
-        </script>
+						<script src="./assets/vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
+		 <script src="./assets/script/orders.js" type="text/javascript"></script> 
+     
+		<script src="~/Content/assets/vendors/general/bootstrap-daterangepicker/daterangepicker.js" type="text/javascript"></script>
 @endsection

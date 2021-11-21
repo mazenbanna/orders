@@ -103,5 +103,10 @@
 
 		<!--begin::Page Scripts(used by this page) -->
 		<script src="./assets/js/demo1/pages/dashboard.js" type="text/javascript"></script>
-
+<script>
+	$('.dateTime').datepicker({
+		format:'yyyy-mm-dd'
+	});
+	
+</script>
 		<!--end::Page Scripts -->

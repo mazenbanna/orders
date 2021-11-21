@@ -1,6 +1,6 @@
 'use strict';
 // Class definition
-
+[".kt-datatable1"].hide;
 var KTDatatableChildRemoteDataDemo = function() {
 	// Private functions
 
@@ -13,7 +13,7 @@ var KTDatatableChildRemoteDataDemo = function() {
                 type: 'remote',
                 source: {
                   read: {
-                    url: $("[name=MAIN_URL]").val()+"ordersJson",
+                    url: $("[name=MAIN_URL]").val()+"ordersJson?DateFrom=" + $("[name=DateFrom]").val()+ "&DateTo=" + $("[name=DateTo]").val()+ "&PriceFrom=" + $("[name=PriceFrom]").val() + "&PriceTo=" + $("[name=PriceTo]").val() ,
                     map: function(raw) {
                       // sample data mapping
                       var dataSet = raw;
@@ -24,8 +24,8 @@ var KTDatatableChildRemoteDataDemo = function() {
                     },
                   },
                 },
-                pageSizeSelect: [10, 20, 30, 50, 100],
-                pageSize: 10,
+                pageSizeSelect: [5, 10, 15, 100],
+                pageSize: 5,
                 serverPaging: false,
                 serverFiltering: false,
                 serverSorting: false,
@@ -64,7 +64,7 @@ var KTDatatableChildRemoteDataDemo = function() {
 				},{
 					field: 'order.createdAt',
           title: 'orderDate',
-          sortable: false,
+          sortable: true,
           autoHide: false,
 				},
         
@@ -89,7 +89,7 @@ var KTDatatableChildRemoteDataDemo = function() {
         {
 					field: 'basePrice',
           title: 'orderItemPrice',
-          sortable: false,
+          sortable: true,
           autoHide: false,
 				},
         {

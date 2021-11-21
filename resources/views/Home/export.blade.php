@@ -45,11 +45,12 @@
         TableToExcel.convert(table[0], {
             name: `orders.csv`,
             sheet: {
-                name: 'SalesReport'
+                name: 'orders'
             }
         });
         setTimeout(function (e) {
             window.close();
+           // alert(1);
         }, 1000);
     }
     $(document).ready(function (e) {
