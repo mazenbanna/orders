@@ -39,15 +39,6 @@ var KTDatatableChildRemoteDataDemo = function() {
 
 			sortable: true,
 
-			pagination: {
-                field: "ShipDate",
-                page: 1,
-                pages: 18,
-                perpage: 5,
-                sort: "asc",
-                total: 350
-              },
-
 			detail: {
                 title: 'Load sub table',
             },

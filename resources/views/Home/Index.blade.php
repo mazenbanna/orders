@@ -54,7 +54,7 @@
 										<div class="kt-portlet__head-wrapper">
 											&nbsp;
 											<div class="dropdown1 dropdown-inline1">
-												<a  class="btn btn-brand btn-icon-sm" href="{{url('/export')}}" target="_blank">
+												<a  class="btn btn-brand btn-icon-sm" href="{{url('/export')}}?DateFrom={{isset($_GET['DateFrom']) ? $_GET['DateFrom'] : ''}}&&DateTo={{isset($_GET['DateTo']) ? $_GET['DateTo'] : ''}}&&PriceFrom={{isset($_GET['PriceFrom']) ? $_GET['PriceFrom'] : ''}}&&PriceTo={{isset($_GET['PriceTo']) ? $_GET['PriceTo'] : ''}}" target="_blank">
 													<i class="flaticon2-plus"></i> Export
                                                 </a>
 
